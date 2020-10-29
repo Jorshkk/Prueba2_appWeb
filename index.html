@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta - Salmon</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+</head>
+<style>
+    body {
+        background: #fafafa;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="nav-wrapper  blue-grey darken-3">
+            <a href="#" class="brand-logo right">Pesquera</a>
+            <!-- el pescadito pescado pescando pescados -->
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Ventas</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s12 m4 l4">
+        </div>
+        <div class="row">
+            <form action="" name="addForm" class="col s12 m4 l4" id="form">
+                <h1 class="header  blue-grey-text">Venta de Salmon</h1>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" id="txt_cliente" name="txt_cliente" class="validate">
+                        <label for="">Cliente</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mail</i>
+                        <input type="email" id="txt_correo" name="txt_correo" class="validate">
+                        <label for="">Correo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input type="text" id="txt_telefono" name="txt_telefono" class="validate" maxlength="9">
+                        <label for="">Telefono</label>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <select name="tipo" id="tipo" class="browser-default">
+                        <option value="1" disabled selected>Tipo de salmon</option>
+                        <option value="2">Salar</option>
+                        <option value="3">Coho</option>
+                        <option value= "4">Trucha</option>
+                </select>
+                </div>
+                <div class="input-field col s6">
+                    <select name="cantidad" id="cantidad" class="browser-default">
+                        <option value="" disabled selected>Kilos</option>
+                        <script>
+                                for (var i = 1; i <= 10; i++) {
+                                            document.write("<option value='" + i + "'>" + i + "</option>")
+                                        }
+                        </script>
+                    </select>
+                </div>
+                <div class="input-field col s12 center-align">
+                    <a class="waves-effect waves-light btn  cyan darken-4" id="calcular">Calcular</a>
+                </div>
+                <div id="totalResutado">
+                    <span id="tipo-salmon"></span>
+                    <span id="cantidad-salmon"></span>
+                    <span id="subTotal"></span>
+                    <span id="iva"></span>
+                    <span id="Total"></span>
+                </div>
+        </div>
+        <div class="container center-align">
+            <div id="alerta">
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+<footer class="page-footer grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Nuestra meta</h5>
+                <p class="grey-text text-lighten-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, ratione.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contactos</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Twiter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright  grey darken-4">
+        <div class="container">
+            © 2020 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">Jorge Sagredo</a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/JavaScript" src="js/jquery.js"></script>
+<script type="text/JavaScript" src="js/main.js"></script>
+
+</html>
